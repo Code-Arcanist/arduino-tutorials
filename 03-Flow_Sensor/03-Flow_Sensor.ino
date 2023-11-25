@@ -34,12 +34,12 @@ void loop() {
 
   uint16_t now = millis();
 
-  // Reset the last time we reset the counter 
-  last = now;
-  
   // How many milliseconds between calculations
   uint16_t prev_period = now - last;
-  
+
+  // Reset the last time we reset the counter 
+  last = now;
+
   // The frequence is calculated as the number of counts
   // divided by the number of seconds (milliseconds / 1000)
   float freq = (1.0 * prev_count) / (prev_period / 1000.0);
